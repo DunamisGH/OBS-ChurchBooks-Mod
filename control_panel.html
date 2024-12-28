@@ -49,6 +49,29 @@ DoubleClick on History erase all previous text"></textarea>
                   </svg>
                   </button>
                 </div>
+                <div class="settings-icons bible-version" style="font-size: 0.7em;width: 40%;">
+                  <!-- <label class="">Books</label> -->
+                  <select name="bible-version" id="bible-version0">
+                   <option value="assets/churchbooks/hymnPair.js">MHB Paired</option>
+                 <option value="assets/churchbooks/hymnCAN.js">CAN</option>
+                 <option value="assets/churchbooks/hymnFante.js">Fantse Hymn</option>
+                 <option value="assets/churchbooks/bibleFante.js">Fante Bible</option>
+                 <option value="assets/churchbooks/cantFante.js">Canticle fante</option>
+                 <option value="assets/churchbooks/cantEng.js">Canticle English</option>
+                 <option value="assets/churchbooks/creedFante.js">Creed Fante</option>
+                 <option value="assets/churchbooks/creedEng.js">Creed English</option>
+                    <!-- <option value="assets/bibles/amplified/amplified.js">Amplified Bible</option> -->
+                    <!-- <option value="assets/bibles/crtb/crtb.js">Russian Bible</option> -->
+                    <option value="assets/bibles/kjv/kjv.js">Authorized KJV</option>
+                    <option value="assets/bibles/esv/esv.js">ESV</option>
+                    <!-- <option value="assets/bibles/es_rvr/es_rvr.js">Español (Spanish)</option> -->
+                    <option value="assets/bibles/nkjv/nkjv.js">NKJV</option>
+                    <option value="assets/bibles/niv/niv.js">NIV</option>
+                    <!-- <option value="assets/bibles/segond_1910/segond_1910.js">Louis Segond (French)</option> -->
+                    <!-- <option value="assets/bibles/swahili_bible/swahili_bible.js">Swahili Bible</option> -->
+                    <!-- <option value="assets/bibles/yoruba_bible/yoruba_bible.js">Yoruba Bible</option> -->
+                  </select>
+                </div>
               </div>
             </div>
             <div class="grid-item bible-container selected" id="bible">
@@ -133,19 +156,25 @@ DoubleClick on History erase all previous text"></textarea>
            <div class="settings-tab-area" id="settings-general">
              <div class="column settings-area">
                <div class="row">
-                 <div class="settings-icons bible-version">
+                 <div class="settings-icons bible-version" style="display: none;">
                    <label class="">Bible Translation</label>
                    <select name="bible-version" id="bible-version">
-                     <option value="assets/bibles/amplified/amplified.js">Amplified Bible</option>
-                     <option value="assets/bibles/crtb/crtb.js">Russian Bible</option>
+                    <option value="assets/churchbooks/hymnPair.js">MHB Paired</option>
+                  <option value="assets/churchbooks/hymnCAN.js">CAN</option>
+                  <option value="assets/churchbooks/hymnFante.js">Fantse Hymn</option>
+                  <option value="assets/churchbooks/bibleFante.js">Fante Bible</option>
+                  <option value="assets/churchbooks/cantFante.js">Canticle fante</option>
+                  <option value="assets/churchbooks/creedFante.js">Creed Fante</option>
+                     <!-- <option value="assets/bibles/amplified/amplified.js">Amplified Bible</option> -->
+                     <!-- <option value="assets/bibles/crtb/crtb.js">Russian Bible</option> -->
                      <option value="assets/bibles/kjv/kjv.js">Authorized KJV</option>
                      <option value="assets/bibles/esv/esv.js">ESV</option>
-                     <option value="assets/bibles/es_rvr/es_rvr.js">Español (Spanish)</option>
+                     <!-- <option value="assets/bibles/es_rvr/es_rvr.js">Español (Spanish)</option> -->
                      <option value="assets/bibles/nkjv/nkjv.js">NKJV</option>
                      <option value="assets/bibles/niv/niv.js">NIV</option>
-                     <option value="assets/bibles/segond_1910/segond_1910.js">Louis Segond (French)</option>
-                     <option value="assets/bibles/swahili_bible/swahili_bible.js">Swahili Bible</option>
-                     <option value="assets/bibles/yoruba_bible/yoruba_bible.js">Yoruba Bible</option>
+                     <!-- <option value="assets/bibles/segond_1910/segond_1910.js">Louis Segond (French)</option> -->
+                     <!-- <option value="assets/bibles/swahili_bible/swahili_bible.js">Swahili Bible</option> -->
+                     <!-- <option value="assets/bibles/yoruba_bible/yoruba_bible.js">Yoruba Bible</option> -->
                    </select>
                  </div>
                  <select id="panelTheme">

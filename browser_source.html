@@ -3,6 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    p {
+        transition: opacity 0.5s ease;
+        
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align:right;
+        justify-content: center;
+
+    }
+    p span{
+      margin-bottom: 5px;
+    }
+    p > *:not(span){
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .fade-out {
+        opacity: 0;
+    }
+    .fade-in {
+        opacity: 1;
+    }
+    /* .split{ */
+      /* display:flex; */
+      /* justify-content: center; */
+      /* align-items:center; */
+      /* gap:10px; */
+      /* margin-top: 5px; */
+    /* } */
+    /* hr{ */
+      /* flex-grow:1; */
+      /* border:none; */
+      /* border-top:1px solid #000; */
+    /* } */
+     /* Vertical Rule Style */
+     hr{
+      width: 10px;               /* Thickness of the line */
+      height: 10em;            /* Height of the vertical line */
+      background-color: rgb(167, 167, 167);  /* Color of the line */
+      margin: 0 20px;           /* Space around the line */
+      
+    }
+    span{
+      position:absolute;
+      top: 0;
+      left: 0;
+      margin: 0px;
+      font-size: .5em;
+    }
+</style>
   <link rel="stylesheet" href="assets/css/browser_style.css">
   <title>Receiver</title>
 </head>
@@ -15,21 +69,37 @@
 
   <script src="assets/js/browser_app.js"></script>
   <script>
+    
+    
     const bgContainer = document.getElementById("bg-container");
     const messageDisplay = document.getElementById("messageDisplay");
     // const messageTitle = document.getElementById("messageTitle");
+    
+    //TRANSITION EFX
+    function applyFadeEffect(pElement) {
+  pElement.classList.remove('fade-in');
+  pElement.classList.add('fade-out');
 
+  setTimeout(() => {
+      pElement.classList.remove('fade-out');
+      pElement.classList.add('fade-in');
+  }, 500);  // Matches the CSS transition duration
+}
     // Text channel
     const channel = new BroadcastChannel("myChannel");
     channel.onmessage = (event) => {
-      const message = event.data;
-      messageDisplay.innerHTML = message;
-      localStorage.setItem('savedMessage', message);
+      applyFadeEffect(messageDisplay);
+      setTimeout(() => {
+        const message = event.data;
+        messageDisplay.innerHTML = message;
+        localStorage.setItem('savedMessage', message);
 
-      if (savedTitleColor) {
-          const dspans = document.querySelectorAll("#messageDisplay span");
-          dspans.forEach(dspan => dspan.style.color = savedTitleColor);
-      }
+        if (savedTitleColor) {
+            const dspans = document.querySelectorAll("#messageDisplay span");
+            dspans.forEach(dspan => dspan.style.color = savedTitleColor);
+        }
+
+    },400)
     };
 
     // settings channel

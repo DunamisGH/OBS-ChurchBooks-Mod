@@ -39,3 +39,13 @@ document.getElementById("bible-version").addEventListener("change", function() {
         displayBible();
     });
 });
+// Listen for changes in the selected Bible version
+document.getElementById("bible-version0").addEventListener("change", function() {
+    const selectedScriptFile = this.value;
+
+    loadScriptFile(selectedScriptFile).then(() => {
+        getSavedBible();
+        generateIndexForBibleBooks();
+        displayBible();
+    });
+});

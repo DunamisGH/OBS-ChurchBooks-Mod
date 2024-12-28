@@ -29,7 +29,7 @@ function searchBible(query) {
         const pElement = document.createElement('p');
         const cleanedName = matchingVerse.name.replace(/:/g, '-').replace(/\s/g, '').toLowerCase();
         pElement.id = cleanedName;
-        pElement.innerHTML = `<span>${matchingVerse.name.toUpperCase()}</span> ${matchingVerse.verse}`;
+        pElement.innerHTML = `<span>${matchingVerse.name.toUpperCase()}</span> ${matchingVerse.verse}`+(typeof matchingVerse.trans!='undefined'?`<hr>${matchingVerse.trans}`:"");
         bblVerseDiv.appendChild(pElement);
       }
     }
@@ -39,6 +39,7 @@ function searchBible(query) {
     for (let i = 0; i < bible_data.length; i++) {
       const name = bible_data[i].name.toLowerCase();
       const verse = bible_data[i].verse.toLowerCase();
+      const trans = typeof bible_data[i].trans != "undefined"?bible_data[i].trans:"";
 
       if (name === lowercaseQuery || verse === lowercaseQuery) {
         const cleanedName = bible_data[i].name.replace(/:/g, '-').replace(/\s/g, '').toLowerCase();
@@ -49,7 +50,7 @@ function searchBible(query) {
         const pElement = document.createElement('p');
         pElement.classList.add("verse");
         pElement.id = cleanedName;
-        pElement.innerHTML = `<span>${name.toUpperCase()}</span> ${bible_data[i].verse}`;
+        pElement.innerHTML = `<span>${name.toUpperCase()}</span> ${bible_data[i].verse}`+(trans !=""?`<hr>${trans}`:"");
 
         bblVerseDiv.appendChild(pElement);
       }
@@ -65,6 +66,7 @@ function searchBible(query) {
     for (let i = 0; i < bible_data.length; i++) {
         const name = bible_data[i].name.toLowerCase();
         const verse = bible_data[i].verse.toLowerCase();
+        const trans = typeof bible_data[i].trans!='undefined'?bible_data[i].trans.toLowerCase():"";
 
         // Check if all words in the search query are present in either the name or the verse
         const isMatchInName = searchWords.every(word => name.includes(word));
@@ -75,7 +77,7 @@ function searchBible(query) {
             const pElement = document.createElement('p');
             pElement.classList.add("verse");
             pElement.id = cleanedName;
-            pElement.innerHTML = `<span>${name.toUpperCase()}</span> ${bible_data[i].verse}`;
+            pElement.innerHTML = `<span>${name.toUpperCase()}</span> ${bible_data[i].verse}`+(trans!=""?`<hr>${trans}`:"");
             const ariParts = bible_data[i].ari;
             savedBibleVerse.push(ariParts);
 
@@ -90,6 +92,7 @@ function searchBible(query) {
       for (let i = 0; i < bible_data.length; i++) {
         const name = bible_data[i].name.toLowerCase();
         const verse = bible_data[i].verse.toLowerCase();
+        const trans = typeof bible_data[i].trans!='undefined'?bible_data[i].trans.toLowerCase():"";
 
         if (name.includes(lowercaseQueryWithColon) || verse.includes(lowercaseQueryWithColon)) {
           const cleanedName = bible_data[i].name.replace(/:/g, '-').replace(/\s/g, '').toLowerCase();
@@ -99,12 +102,13 @@ function searchBible(query) {
 
           const pElement = document.createElement('p');
           pElement.id = cleanedName;
-          pElement.innerHTML = `<span>${name.toUpperCase()}</span> ${bible_data[i].verse}`;
+          pElement.innerHTML = `<span>${name.toUpperCase()}</span> ${bible_data[i].verse}`+(trans!=""?`<hr>${trans}`:"");
           bblVerseDiv.appendChild(pElement);
         }
       }
   }
   localStorage.setItem('savedBibleVerse', savedBibleVerse);
+  // location.reload();
 }
 
 
@@ -121,7 +125,11 @@ function getBibeAri(query) {
         const pElement = document.createElement('p');
         const cleanedName = matchingVerse.name.replace(/:/g, '-').replace(/\s/g, '').toLowerCase();
         pElement.id = cleanedName;
-        pElement.innerHTML = `<span>${matchingVerse.name.toUpperCase()}</span> ${matchingVerse.verse}`;
+        let trans=matchingVerse.trans;
+        if(typeof trans == 'undefined'){
+          trans="";
+        }
+        pElement.innerHTML = `<span>${matchingVerse.name.toUpperCase()}</span> ${matchingVerse.verse}`+ (typeof matchingVerse.trans!='undefined'?`<hr>${matchingVerse.trans}`:"");
         bblVerseDiv.appendChild(pElement);
       }
     }
