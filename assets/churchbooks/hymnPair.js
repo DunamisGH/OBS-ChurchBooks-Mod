@@ -1,16 +1,16 @@
 var bible_data = [
     {
         "Index": 1,
-        "ari": "0:0:0",
+        "ari": "1:121:4",
         "foot": "MHB 121:4",
-        "name": "0:0:0",
+        "name": "MHB:0:0",
         "title": "0:0:0",
         "trans": "\n. O Ewuradze , m'betsie, adɔ W', \r\nNye W' atsena, na sɛ \r\nMuwu mpo a, maannhera,\r\nNa mbom menye W' atsena afebɔɔ\r\nWɔ sorsor wɔ dɛw a\r\nƆnnkɛsakyer da n' mu.",
         "verse": "\n0:0:0"
     },
     {
         "Index": 2,
-        "ari": "0:0:0",
+        "ari": "1:980:6",
         "foot": "MHB 980:6",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -19,16 +19,16 @@ var bible_data = [
     },
     {
         "Index": 3,
-        "ari": "0:0:0",
-        "foot": "MHB 905:NDƆMBA, hom nwosow ngu wimu,\r\nNkyerɛ mununkum nye awɔw;\r\nAfe n' rokɔ ewiei anafua 'i,\r\nNdɔmba, hom nwosow ngya no kwan.",
+        "ari": "1:905:1",
+        "foot": "MHB 905:1",
         "name": "0:0:0",
         "title": "0:0:0",
-        "trans": "\n0:0:0",
+        "trans": "\nNDƆMBA, hom nwosow ngu wimu,\r\nNkyerɛ mununkum nye awɔw;\r\nAfe n' rokɔ ewiei anafua 'i,\r\nNdɔmba, hom nwosow ngya no kwan.",
         "verse": "\n0:0:0"
     },
     {
         "Index": 4,
-        "ari": "0:0:0",
+        "ari": "1:874:4",
         "foot": "MHB 874:4",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -37,7 +37,7 @@ var bible_data = [
     },
     {
         "Index": 5,
-        "ari": "0:0:0",
+        "ari": "1:84:7",
         "foot": "MHB 84:7",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -46,7 +46,7 @@ var bible_data = [
     },
     {
         "Index": 6,
-        "ari": "0:0:0",
+        "ari": "1:769:2",
         "foot": "MHB 769:2",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -55,7 +55,7 @@ var bible_data = [
     },
     {
         "Index": 7,
-        "ari": "0:0:0",
+        "ari": "1:756:WIADZE",
         "foot": "MHB 756:WIADZE paanoo a wobubuu n' adom m',\r\nƆkra wenyin a wokyii n' mbɔbɔrm';\r\nƆwo na ekaa nkwa asɛm no,\r\nƆwo ewu ma hɛn bɔn ewu;\r\nHwɛ akoma a yaw epira no,\r\nHwɛ nyinsu a ndzenbɔnyɛfo kyi,\r\nMa, W'edziban nyɛ nsɛnkyerɛdze\r\nDɛ W'adom nyɛn hɛn akra ampa.",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -64,7 +64,7 @@ var bible_data = [
     },
     {
         "Index": 8,
-        "ari": "0:0:0",
+        "ari": "1:753:4",
         "foot": "MHB 753:4",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -73,7 +73,7 @@ var bible_data = [
     },
     {
         "Index": 9,
-        "ari": "0:0:0",
+        "ari": "1:66:3",
         "foot": "MHB 66:3",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -82,7 +82,7 @@ var bible_data = [
     },
     {
         "Index": 10,
-        "ari": "0:0:0",
+        "ari": "1:617:5",
         "foot": "MHB 617:5",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -91,7 +91,7 @@ var bible_data = [
     },
     {
         "Index": 11,
-        "ari": "0:0:0",
+        "ari": "1:589:6",
         "foot": "MHB 589:6",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -100,7 +100,7 @@ var bible_data = [
     },
     {
         "Index": 12,
-        "ari": "0:0:0",
+        "ari": "1:582:4",
         "foot": "MHB 582:4",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -109,7 +109,7 @@ var bible_data = [
     },
     {
         "Index": 13,
-        "ari": "0:0:0",
+        "ari": "1:537:7",
         "foot": "MHB 537:7",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -118,7 +118,7 @@ var bible_data = [
     },
     {
         "Index": 14,
-        "ari": "0:0:0",
+        "ari": "1:537:6",
         "foot": "MHB 537:6",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -127,7 +127,7 @@ var bible_data = [
     },
     {
         "Index": 15,
-        "ari": "0:0:0",
+        "ari": "1:554:6",
         "foot": "MHB 554:6",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -136,7 +136,7 @@ var bible_data = [
     },
     {
         "Index": 16,
-        "ari": "0:0:0",
+        "ari": "1:513:8",
         "foot": "MHB 513:8",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -145,7 +145,7 @@ var bible_data = [
     },
     {
         "Index": 17,
-        "ari": "0:0:0",
+        "ari": "1:134:3",
         "foot": "MHB 134:3",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -154,7 +154,7 @@ var bible_data = [
     },
     {
         "Index": 18,
-        "ari": "0:0:0",
+        "ari": "1:142:6",
         "foot": "MHB 142:6",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -163,7 +163,7 @@ var bible_data = [
     },
     {
         "Index": 19,
-        "ari": "0:0:0",
+        "ari": "1:18:7",
         "foot": "MHB 18:7",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -172,7 +172,7 @@ var bible_data = [
     },
     {
         "Index": 20,
-        "ari": "0:0:0",
+        "ari": "1:517:5",
         "foot": "MHB 517:5",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -181,7 +181,7 @@ var bible_data = [
     },
     {
         "Index": 21,
-        "ari": "0:0:0",
+        "ari": "1:211:4",
         "foot": "MHB 211:4",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -190,7 +190,7 @@ var bible_data = [
     },
     {
         "Index": 22,
-        "ari": "0:0:0",
+        "ari": "1:234:5",
         "foot": "MHB 234:5",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -199,7 +199,7 @@ var bible_data = [
     },
     {
         "Index": 23,
-        "ari": "0:0:0",
+        "ari": "1:196:3",
         "foot": "MHB 196:3",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -208,7 +208,7 @@ var bible_data = [
     },
     {
         "Index": 24,
-        "ari": "0:0:0",
+        "ari": "1:250:4",
         "foot": "MHB 250:4",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -217,7 +217,7 @@ var bible_data = [
     },
     {
         "Index": 25,
-        "ari": "0:0:0",
+        "ari": "1:290:7",
         "foot": "MHB 290:7",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -226,7 +226,7 @@ var bible_data = [
     },
     {
         "Index": 26,
-        "ari": "0:0:0",
+        "ari": "1:325:5",
         "foot": "MHB 325:5",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -235,7 +235,7 @@ var bible_data = [
     },
     {
         "Index": 27,
-        "ari": "0:0:0",
+        "ari": "1:496:5",
         "foot": "MHB 496:5",
         "name": "0:0:0",
         "title": "0:0:0",
@@ -244,7 +244,7 @@ var bible_data = [
     },
     {
         "Index": 28,
-        "ari": "0:0:0",
+        "ari": "1:25:4",
         "foot": "MHB 25:4",
         "name": "0:0:0",
         "title": "0:0:0",
