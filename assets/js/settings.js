@@ -240,7 +240,7 @@ textShadowColor.addEventListener("change", function() {
 textShadowOpacity.addEventListener("input", function () {
     let currentOpacity = textShadowOpacity.value / 10;
     localStorage.setItem('savedTextOpacity', textShadowOpacity.value);
-    let shadowColor = localStorage.getItem('shadowColor');
+    let shadowColor = localStorage.getItem('textShadowColor');
 
     let rgbValues = shadowColor.match(/\d+/g);
     let newColor = `rgba(${rgbValues[0]}, ${rgbValues[1]}, ${rgbValues[2]}, ${currentOpacity})`;
