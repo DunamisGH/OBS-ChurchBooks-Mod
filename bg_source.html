@@ -51,16 +51,21 @@
                 if (existingVideo) {
                     existingVideo.remove(); // Remove previous video
                 }
-
+                
                 if (mediaType.startsWith('image')) {
                     // Set image as the background of #overlay
                     overlay.style.backgroundImage = `url(${mediaSrc})`;
-                } else if (mediaType.startsWith('video')) {
+                } 
+                else if(mediaType.startsWith('blank')){
+                    // overlay.style.background = `${mediaSrc}`;
+
+                }
+                else if (mediaType.startsWith('video')) {
                     // Add a video as a child of #overlay
                     const video = document.createElement('video');
                     video.src = mediaSrc;
                     video.autoplay = true;
-                    video.loop = true;
+                    video.loop = false;
                     video.muted = true; // Mute for a better background experience
                     video.style.position = 'absolute';
                     video.style.top = '0';
@@ -85,6 +90,16 @@
             const { type, src, mediaType } = event.data;
             if (type === 'play') {
                 displayMedia(src, mediaType);
+            }
+            if(document.querySelector('video')!=null){
+                if(type==='loop'){
+                    document.querySelector('video').loop=true;
+                    document.querySelector('video').play();
+                }
+                if(type==='unloop'){
+                    document.querySelector('video').loop=false;
+                }
+
             }
         };
     </script>

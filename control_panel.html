@@ -70,8 +70,17 @@
       #addbtn {
           position: sticky;
           bottom: 0;
+          width: 100%;
           margin: 5px;
           font-size: 2em;
+          display: flex;
+          gap:5%;
+      }
+      button#add{
+        flex-grow: 2;
+      }
+      #blank{
+        flex-grow: 1;
       }
       .preview img, .preview video {
           display: block;
@@ -109,11 +118,19 @@ DoubleClick on History erase all previous text"></textarea>
           <div class="container">
             <!-- select backgrounds -->
             <div id="cpl"></div>
-            <div id="addbtn">
+            <!-- <div id="addbtn">
                 <button id="add">+</button>
                 <input type="file" id="file-input" accept="image/*,video/*" multiple style="display: none;">
-            </div>
-
+            </div> -->
+            <div id="addbtn">
+              <button id="add">ADD</button>
+              <div class="ctrl" style="display: flex; gap: 5px; align-items: center;">
+                <input type="checkbox" name="Loop" id="loopCheck">
+                <label for="loopCheck" style="font-size: 1rem;">Loop?</label>
+                <button id="blank">BLANK</button>
+              </div>
+              <input type="file" id="file-input" accept="image/*,video/*" multiple="" style="display: none;">
+          </div>
           </div>
         </div>
         <div id="bibleText" class="tab-area" style="display:none;">
@@ -334,9 +351,9 @@ DoubleClick on History erase all previous text"></textarea>
                  </div>
                </div>
                <div class="column">
-                 <div class="inherit-bg">This plugin is provided for free with love.</div>
-                 <div class="inherit-bg">Author: Oluwatosin Durodola <a href="https://buymeacoffee.com/tosin789" rel="noopener noreferrer"
-                   class="btn" id="donate" target="_blank">Donate</a>
+                 <div class="inherit-bg" style="font-size: .5rem;">Author: Oluwatosin Durodola <a href="https://buymeacoffee.com/tosin789" rel="noopener noreferrer"
+                  class="btn" id="donate" target="_blank" style="font-size: inherit;">Donate</a>
+                  <div class="inherit-bg">This plugin is provided for free with love.</div>
                  </div>
                </div>
              </div>
@@ -752,7 +769,10 @@ DoubleClick on History erase all previous text"></textarea>
         playBtn.textContent = 'play';
         playBtn.addEventListener('click', () => {
             channelDsp.postMessage({ type: 'play', src: mediaSrc, mediaType });
+            loopchecks();
         });
+
+        
 
         const delBtn = document.createElement('button');
         delBtn.className = 'del';
@@ -763,11 +783,35 @@ DoubleClick on History erase all previous text"></textarea>
         btns.appendChild(delBtn);
 
         row.appendChild(preview);
-        row.appendChild(ctrl);
+        // row.appendChild(ctrl);
         row.appendChild(btns);
         cpl.appendChild(row);
     }
+    
+    //blank bg
+        const blankBtn = document.getElementById('blank');
+        blankBtn.addEventListener('click', () => {
+          // const mediaSrc = "#000";
+          channelDsp.postMessage({ type: 'play', src: 'blank', mediaType:'blank'});
+        });
 
+        //looping control
+        const looper = document.getElementById('loopCheck');
+
+        looper.addEventListener('change', () => {
+          loopchecks();
+        });
+
+        function loopchecks(){
+          // const mediaSrc = "#000";
+          if(looper.checked){
+            channelDsp.postMessage({ type: 'loop', src: 'loop', mediaType:'loop'});
+          }
+          else{
+            channelDsp.postMessage({ type: 'unloop', src: 'unloop', mediaType:'unloop'});
+          }
+          
+        }
     // Listen for BroadcastChannel messages
     // channelDsp.onmessage = (event) => {
     //     const { type, src, mediaType } = event.data;
