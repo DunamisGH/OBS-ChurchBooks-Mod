@@ -23,19 +23,7 @@ p {
     .fade-in {
         opacity: 1;
     }
-    /* .split{ */
-      /* display:flex; */
-      /* justify-content: center; */
-      /* align-items:center; */
-      /* gap:10px; */
-      /* margin-top: 5px; */
-    /* } */
-    /* hr{ */
-      /* flex-grow:1; */
-      /* border:none; */
-      /* border-top:1px solid #000; */
-    /* } */
-     /* Vertical Rule Style */
+    
      hr{
       width: 10px;               /* Thickness of the line */
       height: 10em;            /* Height of the vertical line */
